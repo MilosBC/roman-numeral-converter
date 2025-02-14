@@ -1,0 +1,123 @@
+
+:root {
+    --background-color: #1B1B32;
+    --container-color: #3B3B4F;
+    --input-field-color: #0A0A23;
+    --button-color: #FFB439;
+    --border-color: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    position: relative;
+
+
+}
+
+h1 {
+    font-family:  "Roboto", serif;
+    text-align: center;
+}
+
+.container {
+    width: 400px;
+   
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 3px solid var(--border-color);
+    padding: 20px 0;
+    background-color: var(--container-color);
+    margin-top: 20px;
+}
+
+.converter-div {
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+#number {
+    display: block;
+}
+
+label {
+    font-size: 1.7rem;
+}
+
+#number {
+    margin: 10px 0;
+    width: 300px;     
+    height: 50px; 
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--border-color);
+    font-size: 1.6rem;
+}
+
+#convert-btn {
+    margin-top: 5px;
+    width: 300px;     
+    height: 50px; 
+    border: 2px solid #ff8800;
+    background-color: var(--button-color);
+    color: black;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+}
+
+#output {
+    width: 400px;
+    background-color: var(--container-color);
+    border: 3px solid var(--border-color);
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 10px 0;
+    position: absolute;
+    top: 500px
+}
+
+.footer {
+    width: 400px;
+    font-size: 1.8rem;
+    display: flex;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 250px;
+}
+
+.fa-github {
+    transition: transform .5s ease-in-out;
+    font-size: 2.8rem; 
+    margin-left: 12px; 
+    margin-top: 19px;
+    color: var(--border-color);
+    position: relative;
+    bottom: 28px;
+    left: 1px;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg);
+}
+
+.hidden {
+    display: none;
+}
+
+
