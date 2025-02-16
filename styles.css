@@ -63,7 +63,7 @@ label {
     border: 1px solid var(--border-color);
     background-color: var(--background-color);
     color: var(--border-color);
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 
 #convert-btn {
@@ -73,7 +73,7 @@ label {
     border: 2px solid #ff8800;
     background-color: var(--button-color);
     color: black;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     cursor: pointer;
 
 }
@@ -84,7 +84,7 @@ label {
     border: 3px solid var(--border-color);
     margin-top: 20px;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     padding: 10px 0;
     position: absolute;
     top: 500px
