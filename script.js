@@ -8,6 +8,152 @@ function removeHidden() {
      }
 }
 
+function addOnes(num) {
+   switch(num) {
+         case '0':
+            return '';
+            
+
+         case '1':
+            return 'I';
+             
+ 
+          case '2':
+             return 'II';
+             
+ 
+          case '3':
+            return 'III';
+             
+ 
+          case '4':
+            return 'IV';
+             
+ 
+          case '5':
+            return 'V';
+             
+          case '6':
+             return 'VI';
+             
+ 
+          case '7':
+             return 'VII';
+             
+ 
+          case '8':
+            return 'VIII';
+             
+ 
+          case '9':
+            return 'IX';
+             
+              
+        }
+}
+
+function addTens(num) {
+   switch(num) {
+      case '0':
+         return '';
+         
+
+      case '1':
+         return 'X';
+          
+
+       case '2':
+          return 'XX';
+          
+
+       case '3':
+         return 'XXX';
+          
+
+       case '4':
+         return 'XL';
+          
+
+       case '5':
+         return 'L';
+          
+       case '6':
+          return 'LX';
+          
+
+       case '7':
+          return 'LXX';
+          
+
+       case '8':
+         return 'LXXX';
+          
+
+       case '9':
+         return 'XC';
+          
+           
+     }
+}
+
+function addHundreths(num) {
+   switch(num) {
+      case '0':
+          return '';
+      case '1':
+          return 'C';
+          
+
+       case '2':
+          return 'CC';
+          
+
+       case '3':
+          return 'CCC';
+          
+
+       case '4':
+          return 'CD';
+          
+
+       case '5':
+          return 'D';
+          
+       case '6':
+          return 'DC';
+          
+
+       case '7':
+          return 'DCC';
+          
+
+       case '8':
+          return 'DCCC';
+          
+
+       case '9':
+          return 'CM';
+          
+           
+     }
+}
+
+function addThousands(num) {
+   switch(num) {
+      case '1':
+          return 'M';
+          
+
+       case '2':
+          return 'MM';
+          
+
+       case '3':
+          return 'MMM';
+          
+   }
+}
+
 function displayRomanNumber(num) {
        let result = '';
         const textNum = String(num);
@@ -15,382 +161,29 @@ function displayRomanNumber(num) {
         let splitValues;
 
        if (textNum.length === 1) {
-       switch(textNum) {
-       case '1':
-            result += 'I';
-            break;
-
-         case '2':
-            result += 'II';
-            break;
-
-         case '3':
-            result += 'III';
-            break;
-
-         case '4':
-            result += 'IV';
-            break;
-
-         case '5':
-            result += 'V';
-            break;
-         case '6':
-            result += 'VI';
-            break;
-
-         case '7':
-            result += 'VII';
-            break;
-
-         case '8':
-            result += 'VIII';
-            break;
-
-         case '9':
-            result += 'IX';
-            break;
-             
-       }
+        result+= addOnes(textNum);
 
       } else if (textNum.length === 2) {
         splitValues = textNum.split('');
 
-        switch(splitValues[0]) {
-         case '1':
-             result += 'X';
-             break;
- 
-          case '2':
-             result += 'XX';
-             break;
- 
-          case '3':
-             result += 'XXX';
-             break;
- 
-          case '4':
-             result += 'XL';
-             break;
- 
-          case '5':
-             result += 'L';
-             break;
-          case '6':
-             result += 'LX';
-             break;
- 
-          case '7':
-             result += 'LXX';
-             break;
- 
-          case '8':
-             result += 'LXXX';
-             break;
- 
-          case '9':
-             result += 'XC';
-             break;
-              
-        }
-
-        switch(splitValues[1]) {
-         case '0':
-            result += '';
-            break;
-
-         case '1':
-             result += 'I';
-             break;
- 
-          case '2':
-             result += 'II';
-             break;
- 
-          case '3':
-             result += 'III';
-             break;
- 
-          case '4':
-             result += 'IV';
-             break;
- 
-          case '5':
-             result += 'V';
-             break;
-          case '6':
-             result += 'VI';
-             break;
- 
-          case '7':
-             result += 'VII';
-             break;
- 
-          case '8':
-             result += 'VIII';
-             break;
- 
-          case '9':
-             result += 'IX';
-             break;
-              
-        }
+        result += addTens(splitValues[0]);
+        result += addOnes(splitValues[1]);
 
 
       } else if (textNum.length === 3) {
          splitValues = textNum.split('');
 
-         switch(splitValues[0]) {
-            case '1':
-                result += 'C';
-                break;
-    
-             case '2':
-                result += 'CC';
-                break;
-    
-             case '3':
-                result += 'CCC';
-                break;
-    
-             case '4':
-                result += 'CD';
-                break;
-    
-             case '5':
-                result += 'D';
-                break;
-             case '6':
-                result += 'DC';
-                break;
-    
-             case '7':
-                result += 'DCC';
-                break;
-    
-             case '8':
-                result += 'DCCC';
-                break;
-    
-             case '9':
-                result += 'CM';
-                break;
-                 
-           }
-
-           switch(splitValues[1]) {
-            case '1':
-                result += 'X';
-                break;
-    
-             case '2':
-                result += 'XX';
-                break;
-    
-             case '3':
-                result += 'XXX';
-                break;
-    
-             case '4':
-                result += 'XL';
-                break;
-    
-             case '5':
-                result += 'L';
-                break;
-             case '6':
-                result += 'LX';
-                break;
-    
-             case '7':
-                result += 'LXX';
-                break;
-    
-             case '8':
-                result += 'LXXX';
-                break;
-    
-             case '9':
-                result += 'XC';
-                break;
-                 
-           }
-
-           switch(splitValues[2]) {
-            case '0':
-               result += '';
-               break;
-   
-            case '1':
-                result += 'I';
-                break;
-    
-             case '2':
-                result += 'II';
-                break;
-    
-             case '3':
-                result += 'III';
-                break;
-    
-             case '4':
-                result += 'IV';
-                break;
-    
-             case '5':
-                result += 'V';
-                break;
-             case '6':
-                result += 'VI';
-                break;
-    
-             case '7':
-                result += 'VII';
-                break;
-    
-             case '8':
-                result += 'VIII';
-                break;
-    
-             case '9':
-                result += 'IX';
-                break;
-                 
-           }
+         result += addHundreths(splitValues[0]);
+         result += addTens(splitValues[1]);
+         result += addOnes(splitValues[2]);
       } else if (textNum.length === 4) {
          splitValues = textNum.split('');
-
-         switch(splitValues[0]) {
-            case '1':
-                result += 'M';
-                break;
-    
-             case '2':
-                result += 'MM';
-                break;
-    
-             case '3':
-                result += 'MMM';
-                break;
-         }
-
-         switch(splitValues[1]) {
-            case '1':
-                result += 'C';
-                break;
-    
-             case '2':
-                result += 'CC';
-                break;
-    
-             case '3':
-                result += 'CCC';
-                break;
-    
-             case '4':
-                result += 'CD';
-                break;
-    
-             case '5':
-                result += 'D';
-                break;
-             case '6':
-                result += 'DC';
-                break;
-    
-             case '7':
-                result += 'DCC';
-                break;
-    
-             case '8':
-                result += 'DCCC';
-                break;
-    
-             case '9':
-                result += 'CM';
-                break;
-                 
-           }
-
-           switch(splitValues[2]) {
-            case '1':
-                result += 'X';
-                break;
-    
-             case '2':
-                result += 'XX';
-                break;
-    
-             case '3':
-                result += 'XXX';
-                break;
-    
-             case '4':
-                result += 'XL';
-                break;
-    
-             case '5':
-                result += 'L';
-                break;
-             case '6':
-                result += 'LX';
-                break;
-    
-             case '7':
-                result += 'LXX';
-                break;
-    
-             case '8':
-                result += 'LXXX';
-                break;
-    
-             case '9':
-                result += 'XC';
-                break;
-                 
-           }
-
-           switch(splitValues[3]) {
-            case '0':
-               result += '';
-               break;
-   
-            case '1':
-                result += 'I';
-                break;
-    
-             case '2':
-                result += 'II';
-                break;
-    
-             case '3':
-                result += 'III';
-                break;
-    
-             case '4':
-                result += 'IV';
-                break;
-    
-             case '5':
-                result += 'V';
-                break;
-             case '6':
-                result += 'VI';
-                break;
-    
-             case '7':
-                result += 'VII';
-                break;
-    
-             case '8':
-                result += 'VIII';
-                break;
-    
-             case '9':
-                result += 'IX';
-                break;
-                 
-           }
+         
+         result += addThousands(splitValues[0]);
+         result += addHundreths(splitValues[1]);
+         result += addTens(splitValues[2]);
+         result += addOnes(splitValues[3]);
+        
       }
 
        
