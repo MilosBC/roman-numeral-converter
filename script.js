@@ -199,7 +199,7 @@ function displayRomanNumber(num) {
 convertButton.addEventListener('click', ()=> {
 
 const numberValue = Number(numberInput.value);
-console.log(numberValue);
+
 
  if (!numberInput.value) {
     
